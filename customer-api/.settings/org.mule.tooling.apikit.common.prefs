@@ -1,0 +1,3 @@
+api_version={"apiId"\:"46111","apiName"\:"Customer","versionName"\:"1.2","versionId"\:"80525","deprecated"\:false,"description"\:"","organizationId"\:"ccad78bd-5e3c-49d8-9ecf-231dc14f4f89","exportUrl"\:"https\://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/ccad78bd-5e3c-49d8-9ecf-231dc14f4f89/apis/46111/versions/80525/files/export","rootFileId"\:"918704"}
+eclipse.preferences.version=1
+users=[{"token"\:"c7a7209b-e47d-48f4-b234-831f000e2f8e","userId"\:"brett-roeder","refreshToken"\:""}]

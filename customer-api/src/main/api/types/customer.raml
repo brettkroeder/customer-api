@@ -1,0 +1,21 @@
+#%RAML 1.0 DataType
+    properties:
+      sourceSystem: string
+      customerId?: string
+      mdmId?: string
+      customerType?: string
+      customerName: string
+      phoneNumbers?:
+        type: array
+        items: !include phone.raml
+      emails?:
+        type: array
+        items: !include email.raml
+      socialIds?:
+        type: array
+        items: !include social.raml
+      addresses?:
+        type: array
+        items: !include address.raml
+      createDateTime?: string
+      lastModifiedDateTime?: string

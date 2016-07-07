@@ -1,0 +1,49 @@
+[
+{
+  "sourceSystem": "Salesforce A",
+  "customerId": "1",
+  "mdmId": "a1",
+  "customerType": "Residential",
+  "customerName": "Roeder Consulting",
+  "phoneNumbers": [
+    {
+      "type": "Main",
+      "phoneNumber": "404-447-6386",
+      "preferred": "yes"
+    },
+    {
+      "type": "Home",
+      "phoneNumber": "678-614-5006"
+    }
+  ],
+  "emails": [
+    {
+      "type": "Corporate",
+      "address": "info@roederConsulting.com",
+      "preferred": "yes"
+    }
+  ],
+  "socialIds": [
+    {
+      "channel": "facebook",
+      "type": "type1",
+      "value": "RoederConsulting" 
+    }
+  ],
+  "addresses": [
+    {
+      "type": "Headquarters",
+      "street": "257 Stone Park Drive",
+      "street2": "#1",
+      "city": "Woodstock",
+      "stateProvince": "GA",
+      "postalCode": "30188",
+      "countryCode": "USA",
+      "latitude": "32.00",
+      "longitude": "33.00"
+    }
+  ],
+  "createDateTime": "2014-08-07T01:02:03",
+  "lastModifiedDateTime": "2016-01-01T12:13:14"
+}
+]

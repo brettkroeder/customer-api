@@ -1,0 +1,96 @@
+#%RAML 1.0
+title: Customer API
+version: 1.0
+#baseUri: http://0.0.0.0:8081
+baseUri: https://mocksvc.mulesoft.com/mocks/071d6d0f-a23d-4b00-87ac-065a2defa059
+traits:
+  collection: !include traits/trait_collection.raml 
+mediaType: application/json
+types:
+  Customer: !include types/customer.raml
+  Message: !include types/message.raml
+/customers:
+  displayName: Customers
+  description: |
+    Working with customers:
+  /all:
+    get:
+      description: |
+        Retrieve all the Customers.
+      is: [ collection ]
+      responses:
+        200:
+          body:
+            type: Customer[]
+            example: !include examples/customer_collection_example.json
+  /byName/{partialName}:
+    uriParameters:
+        partialName:
+          minLength: 2
+          default: roe
+    get:
+      description: |
+        Retrieve all the Customers.
+      is: [ collection ]
+      responses:
+        200:
+          body:
+            type: Customer[]
+            example: !include examples/customer_collection_example.json
+
+/customer:
+  post:
+    description: |
+      Create a new Customer
+    body:
+      type: Customer
+      example: !include examples/customer_example.json
+    responses:
+      201:
+        description: Created
+        body:
+          example: !include examples/customer_example.json
+  /customerId/{id}:
+    displayName: Customer ID
+    uriParameters:
+      id:
+        type: string
+        example: "1"
+        description: Represents the customer unique id
+    get:
+      description: Get Customer by ID
+      responses:
+        200:
+          body:
+            type: Customer
+            example: !include examples/customer_example.json
+        400:
+          body:
+            example: |
+              {
+                "message": "Bad message"
+              }
+        404:
+          body:
+            example: |
+              {
+                "message": "Resource not found"
+              }
+    put:
+      body:
+        type: Customer
+        example: !include examples/customer_example.json
+      responses:
+        204:
+          body:
+            type: Message
+            example: |
+              { "message": "customer updated" }
+    delete:
+      responses:
+        204:
+          body:
+            type: Message
+            example: |
+                { "message": "customer deleted" }
+    
